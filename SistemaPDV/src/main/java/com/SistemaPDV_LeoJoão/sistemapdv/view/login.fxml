@@ -34,6 +34,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -59,6 +60,7 @@
             </Text>
             <TextField layoutX="102.0" layoutY="200.0" />
             <PasswordField layoutX="102.0" layoutY="257.0" />
+            <TextField layoutX="102.0" layoutY="257.0" visible="false" />
             <Text layoutX="96.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
                <font>
                   <Font name="Arial Black" size="12.0" />
@@ -69,18 +71,19 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Text>
-            <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="147.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../../../../../Downloads/logoceep.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="206.0" layoutY="294.0" mnemonicParsing="false" text="Entrar" />
-            <Button layoutX="98.0" layoutY="294.0" mnemonicParsing="false" text="Sair" />
+            <Button layoutX="200.0" layoutY="314.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="51.0" style="-fx-background-color: blue;" text="Entrar" textFill="WHITE" />
+            <Button layoutX="105.0" layoutY="317.0" mnemonicParsing="false" text="Sair" />
             <AnchorPane prefHeight="406.0" prefWidth="48.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </AnchorPane>
+            <ImageView fitHeight="71.0" fitWidth="98.0" layoutX="141.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logoceep.png" />
+               </image>
+            </ImageView>
+            <CheckBox layoutX="164.0" layoutY="286.0" mnemonicParsing="false" text="Mostrar senha" />
       </children>
     </AnchorPane>
   </children>
