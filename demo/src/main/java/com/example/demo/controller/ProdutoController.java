@@ -32,7 +32,7 @@ public class ProdutoController {
         ProdutoInfo.setSetor("Informática");
 
         produtoRepository.save(ProdutoInfo);
-        System.out.println("Cliente Cadastrado com Sucesso!");
+        System.out.println("Produto Cadastrado com Sucesso!");
         
     }
 
