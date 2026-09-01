@@ -26,10 +26,10 @@ public class ProdutoController {
     public void cadastrar(){
         Produto ProdutoInfo = new Produto();
 
-        ProdutoInfo.setNome("Mouse");
-        ProdutoInfo.setPreco(new BigDecimal(25.50));
-        ProdutoInfo.setQuantidade(2);
-        ProdutoInfo.setSetor("Informática");
+        ProdutoInfo.setNome();
+        ProdutoInfo.setPreco();
+        ProdutoInfo.setQuantidade();
+        ProdutoInfo.setSetor();
 
         produtoRepository.save(ProdutoInfo);
         System.out.println("Produto Cadastrado com Sucesso!");
@@ -50,12 +50,14 @@ public class ProdutoController {
     public void alterarProduto(@RequestBody ProdutoRequest produtoRequest){
         Produto ProdutoInfo = produtoRepository.findById(produtoRequest.getId());
         
+        System.out.println(produtoRequest.getNome());
+        System.out.println(produtoRequest.getPreco());
+        System.out.println(produtoRequest.getQuantidade());
+        System.out.println(produtoRequest.getSetor());
         ProdutoInfo.setNome(produtoRequest.getNome());
         ProdutoInfo.setPreco(produtoRequest.getPreco());
         ProdutoInfo.setQuantidade(produtoRequest.getQuantidade());
         ProdutoInfo.setSetor(produtoRequest.getSetor());
         produtoRepository.save(ProdutoInfo);
     }
-
-
 }
