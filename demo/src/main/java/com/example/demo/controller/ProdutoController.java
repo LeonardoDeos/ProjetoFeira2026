@@ -23,13 +23,13 @@ public class ProdutoController {
     }
     
     @PostMapping("/cadastrar")
-    public void cadastrar(){
-        Produto ProdutoInfo = new Produto();
+    public void cadastrar(@RequestBody ProdutoRequest produtoRequest){
+        Produto produtoInfo = new Produto();
 
-        ProdutoInfo.setNome();
-        ProdutoInfo.setPreco();
-        ProdutoInfo.setQuantidade();
-        ProdutoInfo.setSetor();
+        ProdutoInfo.setNome(produtoRequest.getNome());
+        ProdutoInfo.setPreco(produtoRequest.getPreco());
+        ProdutoInfo.setQuantidade(produtoRequest.getQuantidade());
+        ProdutoInfo.setSetor(produtoRequest.getSetor());
 
         produtoRepository.save(ProdutoInfo);
         System.out.println("Produto Cadastrado com Sucesso!");

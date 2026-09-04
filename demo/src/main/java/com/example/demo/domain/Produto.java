@@ -21,25 +21,25 @@ public class Produto {
         return ID;
     }
     public void setId(Integer ID) {
-        ID = ID;
+        this.ID = ID;
     }
     public String getNome() {
         return Nome;
     }
     public void setNome(String Nome) {
-        Nome = Nome;
+        this.Nome = Nome;
     }
     public BigDecimal getPreco() {
         return Preco;
     }
     public void setPreco(BigDecimal preco) {
-        Preco = preco;
+        this.Preco = preco;
     }
     public String getSetor() {
         return Setor;
     }
     public void setSetor(String setor) {
-        Setor = setor;
+        this.Setor = setor;
     }
     public Integer getQuantidade() {
         return Quantidade;
