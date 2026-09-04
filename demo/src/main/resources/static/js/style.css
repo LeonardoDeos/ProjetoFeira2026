@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #666666;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-venda {
+    background-color: #2e7d32;
+}
+
+.btn-venda:hover {
+    background-color: #1b5e20;
+}
+
+.btn-estoque {
+    background-color: #0288d1;
+}
+
+.btn-estoque:hover {
+    background-color: #01579b;
+}
+
+.btn-cadastro {
+    background-color: #ed6c02;
+}
+
+.btn-cadastro:hover {
+    background-color: #e65100;
+}

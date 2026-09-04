@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import java.math.BigDecimal;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +22,7 @@ public class ProdutoController {
     
     @PostMapping("/cadastrar")
     public void cadastrar(@RequestBody ProdutoRequest produtoRequest){
-        Produto produtoInfo = new Produto();
+        Produto ProdutoInfo = new Produto();
 
         ProdutoInfo.setNome(produtoRequest.getNome());
         ProdutoInfo.setPreco(produtoRequest.getPreco());
