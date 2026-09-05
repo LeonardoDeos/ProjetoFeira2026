@@ -12,50 +12,50 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String Nome;
-    private BigDecimal Preco;
-    private String Setor;
-    private Integer Quantidade;
+    private String nome;
+    private BigDecimal preco;
+    private String setor;
+    private Integer quantidade;
+
+    public Produto() {
+    }
+
+    public Produto(Integer id, String nome, BigDecimal preco, String setor, Integer quantidade) {
+        this.id = id;
+        this.nome = nome;
+        this.preco = preco;
+        this.setor = setor;
+        this.quantidade = quantidade;
+    }
     
     public Integer getId() {
         return id;
     }
-    public void setId(Integer ID) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getNome() {
-        return Nome;
+        return nome;
     }
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public BigDecimal getPreco() {
-        return Preco;
+        return preco;
     }
     public void setPreco(BigDecimal preco) {
-        this.Preco = preco;
+        this.preco = preco;
     }
     public String getSetor() {
-        return Setor;
+        return setor;
     }
     public void setSetor(String setor) {
-        this.Setor = setor;
+        this.setor = setor;
     }
     public Integer getQuantidade() {
-        return Quantidade;
+        return quantidade;
     }
     public void setQuantidade(Integer quantidade) {
-        Quantidade = quantidade;
-    }
-    public Produto() {
-    }
-    public Produto(Integer iD, String nome, BigDecimal preco, String setor, Integer quantidade) {
-        id = id;
-        Nome = nome;
-        Preco = preco;
-        Setor = setor;
-        Quantidade = quantidade;
+        this.quantidade = quantidade;
     }
 }
-
-    

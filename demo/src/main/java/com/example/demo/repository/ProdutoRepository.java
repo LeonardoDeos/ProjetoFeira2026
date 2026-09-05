@@ -11,6 +11,6 @@ import com.example.demo.domain.Produto;
 public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 
     Optional<List<Produto>> findByNome(String nome);
-    Produto findById(Long Id);
+    Produto findById(Long id);
 
 }

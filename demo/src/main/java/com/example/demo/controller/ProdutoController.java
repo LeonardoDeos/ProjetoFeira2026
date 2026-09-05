@@ -36,9 +36,9 @@ public class ProdutoController {
     }
 
     @PostMapping("/deletarProduto")
-    public void deletarProduto(@RequestParam Long ID){
+    public void deletarProduto(@RequestParam Long id){
         
-        Produto ProdutoInfo = produtoRepository.findById(ID);
+        Produto ProdutoInfo = produtoRepository.findById(id);
 
         produtoRepository.delete(ProdutoInfo);
         System.out.println("Produto deletado com sucesso");

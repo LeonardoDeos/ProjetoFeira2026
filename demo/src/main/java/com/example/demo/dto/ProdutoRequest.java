@@ -19,8 +19,8 @@ public class ProdutoRequest {
     public String getNome() {
         return nome;
     }
-    public void setNome(String Nome) {
-        this.nome = Nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public BigDecimal getPreco() {
         return preco;
