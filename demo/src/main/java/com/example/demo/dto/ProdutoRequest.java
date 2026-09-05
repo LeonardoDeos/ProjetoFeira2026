@@ -4,46 +4,42 @@ import java.math.BigDecimal;
 
 public class ProdutoRequest {
 
-    private Long ID;
+    private Long id;
     private String nome;
-    private BigDecimal Preco;
-    private String Setor;
-    private Integer Quantidade;
+    private BigDecimal preco;
+    private String setor;
+    private Integer quantidade;
     
-    
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }
     public void setNome(String Nome) {
-        nome = Nome;
+        this.nome = Nome;
     }
     public BigDecimal getPreco() {
-        return Preco;
+        return preco;
     }
     public void setPreco(BigDecimal preco) {
-        Preco = preco;
+        this.preco = preco;
     }
     public String getSetor() {
-        return Setor;
+        return setor;
     }
     public void setSetor(String setor) {
-        Setor = setor;
+        this.setor = setor;
     }
     public Integer getQuantidade() {
-        return Quantidade;
+        return quantidade;
     }
     public void setQuantidade(Integer quantidade) {
-        Quantidade = quantidade;
+        this.quantidade = quantidade;
     }
-    public Long getId() {
-        return ID;
-    }
-    public void setId(Long ID) {
-        this.ID = ID;
-    }
-
-
-
     
 }
 

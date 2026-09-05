@@ -11,17 +11,17 @@ import jakarta.persistence.Id;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ID;
+    private Integer id;
     private String Nome;
     private BigDecimal Preco;
     private String Setor;
     private Integer Quantidade;
     
     public Integer getId() {
-        return ID;
+        return id;
     }
     public void setId(Integer ID) {
-        this.ID = ID;
+        this.id = id;
     }
     public String getNome() {
         return Nome;
@@ -50,8 +50,8 @@ public class Produto {
     public Produto() {
     }
     public Produto(Integer iD, String nome, BigDecimal preco, String setor, Integer quantidade) {
-        ID = ID;
-        nome = nome;
+        id = id;
+        Nome = nome;
         Preco = preco;
         Setor = setor;
         Quantidade = quantidade;

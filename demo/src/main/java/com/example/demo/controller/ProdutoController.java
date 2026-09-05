@@ -22,6 +22,7 @@ public class ProdutoController {
     
     @PostMapping("/cadastrar")
     public void cadastrar(@RequestBody ProdutoRequest produtoRequest){
+        
         Produto ProdutoInfo = new Produto();
 
         ProdutoInfo.setNome(produtoRequest.getNome());
