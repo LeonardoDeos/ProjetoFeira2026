@@ -1,12 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/css/estoqueStyle.css">
+
     <title>Estoque</title>
 </head>
+
 <body>
-    <h1>Estoque</h1>
-    <p>Consulta de produtos em estoque.</p>
+
+    <div class="container">
+
+        <div class="cabecalho">
+            <div>
+                <h1>Estoque</h1>
+                <p>Produtos cadastrados no sistema</p>
+            </div>
+
+            <a href="index.html" class="btn-voltar">
+                ← Voltar
+            </a>
+        </div>
+
+
+        <div class="acoes">
+
+            <button id="btnAtualizar" class="btn-atualizar">
+                Atualizar Estoque
+            </button>
+
+        </div>
+
+
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Setor</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaProdutos">
+
+                    <!-- Os produtos serão inseridos pelo JavaScript -->
+
+                    <tr>
+                        <td colspan="6">
+                            Nenhum produto carregado.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- Modal para alterar produto -->
+
+    <div id="modalAlterar" class="modal">
+
+        <div class="modal-conteudo">
+
+            <h2>Alterar Produto</h2>
+
+            <form id="formAlterar">
+
+                <input type="hidden" id="alterarId">
+
+                <label for="alterarNome">
+                    Nome:
+                </label>
+
+                <input
+                    type="text"
+                    id="alterarNome"
+                    required
+                >
+
+
+                <label for="alterarPreco">
+                    Preço:
+                </label>
+
+                <input
+                    type="number"
+                    id="alterarPreco"
+                    step="0.01"
+                    min="0"
+                    required
+                >
+
+
+                <label for="alterarSetor">
+                    Setor:
+                </label>
+
+                <input
+                    type="text"
+                    id="alterarSetor"
+                    required
+                >
+
+
+                <label for="alterarQuantidade">
+                    Quantidade:
+                </label>
+
+                <input
+                    type="number"
+                    id="alterarQuantidade"
+                    min="0"
+                    required
+                >
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        id="btnCancelar"
+                        class="btn-cancelar"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+                        Salvar Alterações
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="static/js/estoque.js"></script>
+
 </body>
+
 </html>

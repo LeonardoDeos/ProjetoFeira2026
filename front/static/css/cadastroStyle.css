@@ -1,3 +1,4 @@
+```css
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@ body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 
-    background: #121212;
+    background: #0d0d0d;
     color: #ffffff;
 
     display: flex;
@@ -20,15 +21,15 @@ body {
     width: 90%;
     max-width: 500px;
 
-    background: #1e1e1e;
+    background: #1a1a1a;
 
     padding: 35px;
 
     border-radius: 15px;
 
-    border: 1px solid #333;
+    border: 1px solid #333333;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 h1 {
@@ -37,6 +38,8 @@ h1 {
     margin-bottom: 30px;
 
     font-size: 28px;
+
+    color: #ffffff;
 }
 
 form {
@@ -52,7 +55,7 @@ label {
     font-size: 14px;
     font-weight: bold;
 
-    color: #cccccc;
+    color: #cfcfcf;
 }
 
 input {
@@ -61,20 +64,22 @@ input {
     padding: 12px;
 
     border-radius: 8px;
-    border: 1px solid #444;
+    border: 1px solid #444444;
 
-    background: #292929;
+    background: #252525;
     color: #ffffff;
 
     outline: none;
 
     font-size: 15px;
+
+    transition: 0.2s;
 }
 
 input:focus {
-    border-color: #4f8cff;
+    border-color: #aaaaaa;
 
-    box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
 }
 
 button {
@@ -85,8 +90,8 @@ button {
     border: none;
     border-radius: 8px;
 
-    background: #4f8cff;
-    color: white;
+    background: #e0e0e0;
+    color: #111111;
 
     font-size: 15px;
     font-weight: bold;
@@ -97,7 +102,7 @@ button {
 }
 
 button:hover {
-    background: #3b76df;
+    background: #ffffff;
 }
 
 .container > a {
@@ -107,11 +112,13 @@ button:hover {
 
     text-align: center;
 
-    color: #4f8cff;
+    color: #bdbdbd;
 
     text-decoration: none;
 }
 
 .container > a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
+```

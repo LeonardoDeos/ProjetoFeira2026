@@ -1,0 +1,337 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0d0d0d;
+    color: #ffffff;
+
+    padding: 40px;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.cabecalho p {
+    color: #999999;
+    font-size: 15px;
+}
+
+/* BOTÃO VOLTAR */
+
+.btn-voltar {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-voltar:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ÁREA DE AÇÕES */
+
+.acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.acoes button,
+.acoes a {
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* ATUALIZAR */
+
+.btn-atualizar {
+    border: 1px solid #444444;
+
+    background: #252525;
+    color: #ffffff;
+}
+
+.btn-atualizar:hover {
+    background: #333333;
+}
+
+/* CADASTRAR */
+
+.btn-cadastrar {
+    background: #e0e0e0;
+    color: #111111;
+}
+
+.btn-cadastrar:hover {
+    background: #ffffff;
+}
+
+/* TABELA */
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+
+    background: #1a1a1a;
+
+    border: 1px solid #333333;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 750px;
+}
+
+thead {
+    background: #252525;
+}
+
+th {
+    padding: 16px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    color: #bdbdbd;
+
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px 16px;
+
+    border-top: 1px solid #333333;
+
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #222222;
+}
+
+/* AÇÕES DA TABELA */
+
+.btn-alterar,
+.btn-deletar {
+    border: none;
+    border-radius: 6px;
+
+    padding: 8px 12px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-alterar {
+    background: #d6d6d6;
+    color: #111111;
+}
+
+.btn-alterar:hover {
+    background: #ffffff;
+}
+
+.btn-deletar {
+    background: #292929;
+    color: #dddddd;
+
+    margin-left: 6px;
+
+    border: 1px solid #444444;
+}
+
+.btn-deletar:hover {
+    background: #3a3a3a;
+    color: #ffffff;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    width: 100%;
+    max-width: 500px;
+
+    background: #1a1a1a;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    border: 1px solid #333333;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO DO MODAL */
+
+#formAlterar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#formAlterar label {
+    margin-top: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #cccccc;
+}
+
+#formAlterar input {
+    width: 100%;
+
+    padding: 12px;
+
+    background: #252525;
+    color: #ffffff;
+
+    border: 1px solid #444444;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+#formAlterar input:focus {
+    border-color: #aaaaaa;
+
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+
+/* BOTÕES DO MODAL */
+
+.modal-acoes {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.modal-acoes button {
+    padding: 11px 16px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: #333333;
+    color: #ffffff;
+}
+
+.btn-cancelar:hover {
+    background: #444444;
+}
+
+.btn-salvar {
+    background: #e0e0e0;
+    color: #111111;
+}
+
+.btn-salvar:hover {
+    background: #ffffff;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .cabecalho {
+        align-items: flex-start;
+    }
+
+    .cabecalho h1 {
+        font-size: 26px;
+    }
+
+    .acoes {
+        gap: 10px;
+    }
+
+    .acoes button,
+    .acoes a {
+        padding: 10px 12px;
+    }
+}
+```
