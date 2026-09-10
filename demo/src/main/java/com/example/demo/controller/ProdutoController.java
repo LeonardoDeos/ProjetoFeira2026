@@ -1,5 +1,9 @@
 package com.example.demo.controller;
 
+import java.math.BigDecimal;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +16,7 @@ import com.example.demo.repository.ProdutoRepository;
 
 @RestController
 @RequestMapping("/produto")
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class ProdutoController {
 
         //Serve para fazer a injeção da dependência
@@ -20,20 +25,25 @@ public class ProdutoController {
         this.produtoRepository = produtoRepository;
     }
     
-    @PostMapping("/cadastrar")
-    public void cadastrar(@RequestBody ProdutoRequest produtoRequest){
-        
-        Produto ProdutoInfo = new Produto();
+@PostMapping("/cadastrar")
+public ResponseEntity<String> cadastrar(
+        @RequestParam String nome,
+        @RequestParam BigDecimal preco,
+        @RequestParam Integer quantidade,
+        @RequestParam String setor
+) {
 
-        ProdutoInfo.setNome(produtoRequest.getNome());
-        ProdutoInfo.setPreco(produtoRequest.getPreco());
-        ProdutoInfo.setQuantidade(produtoRequest.getQuantidade());
-        ProdutoInfo.setSetor(produtoRequest.getSetor());
+    Produto produtoInfo = new Produto();
 
-        produtoRepository.save(ProdutoInfo);
-        System.out.println("Produto Cadastrado com Sucesso!");
-        
-    }
+    produtoInfo.setNome(nome);
+    produtoInfo.setPreco(preco);
+    produtoInfo.setQuantidade(quantidade);
+    produtoInfo.setSetor(setor);
+
+    produtoRepository.save(produtoInfo);
+
+    return ResponseEntity.ok("Produto cadastrado com sucesso!");
+}
 
     @PostMapping("/deletarProduto")
     public void deletarProduto(@RequestParam Long id){
