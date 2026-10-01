@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/css/vendaStyle.css">
+
+    <title>Sistema PDV | Vendas</title>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="marca">
+            <h1>Sistema PDV</h1>
+            <p>Ponto de venda</p>
+        </div>
+
+        <div class="cabecalho-direita">
+            <div class="status-caixa">
+                <span class="status-indicador"></span>
+                Caixa aberto
+            </div>
+
+            <a href="Index.html" class="btn-voltar">
+                ← Voltar ao início
+            </a>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <!-- TÍTULO -->
+        <section class="titulo-pagina">
+            <div>
+                <h2>Realizar venda</h2>
+                <p>Registre os produtos e selecione a forma de pagamento.</p>
+            </div>
+
+            <div class="numero-venda">
+                Venda nº <strong>00001</strong>
+            </div>
+        </section>
+
+        <div class="layout-venda">
+
+            <!-- COLUNA PRINCIPAL -->
+            <section class="coluna-principal">
+
+                <!-- BUSCA -->
+                <div class="painel">
+                    <div class="titulo-painel">
+                        <h3>Adicionar produto</h3>
+                        <span class="subtitulo">Leitor / Código</span>
+                    </div>
+
+                    <div class="campo-busca">
+                        <input
+                            type="text"
+                            id="codigoProduto"
+                            placeholder="Digite ou leia o código do produto..."
+                            autocomplete="off"
+                        >
+
+                        <button type="button" class="btn-adicionar">
+                            + Adicionar
+                        </button>
+                    </div>
+
+                    <p class="dica-leitura">
+                        Utilize o leitor de código de barras ou informe o código manualmente.
+                    </p>
+                </div>
+
+                <!-- LISTA DE PRODUTOS -->
+                <div class="painel">
+                    <div class="cabecalho-lista">
+                        <h3>Produtos da venda</h3>
+                        <span class="contador-itens">2 itens</span>
+                    </div>
+
+                    <div class="tabela-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Preço unit.</th>
+                                    <th>Qtd.</th>
+                                    <th>Subtotal</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="nome-produto">Arroz 5 kg</span>
+                                        <span class="codigo-produto">Código: 001</span>
+                                    </td>
+
+                                    <td class="preco">R$ 25,90</td>
+                                    <td><span class="quantidade">1</span></td>
+                                    <td class="preco">R$ 25,90</td>
+
+                                    <td>
+                                        <button type="button" class="btn-remover">
+                                            Remover
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <span class="nome-produto">Feijão 1 kg</span>
+                                        <span class="codigo-produto">Código: 002</span>
+                                    </td>
+
+                                    <td class="preco">R$ 8,50</td>
+                                    <td><span class="quantidade">2</span></td>
+                                    <td class="preco">R$ 17,00</td>
+
+                                    <td>
+                                        <button type="button" class="btn-remover">
+                                            Remover
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- RESUMO DA COMPRA -->
+                <div class="resumo">
+                    <h3>Resumo da compra</h3>
+
+                    <div class="linha-resumo">
+                        <span>Quantidade de itens</span>
+                        <strong>3 unidades</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Subtotal</span>
+                        <strong>R$ 42,90</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Desconto</span>
+                        <strong>R$ 0,00</strong>
+                    </div>
+
+                    <div class="linha-total">
+                        <span>TOTAL A PAGAR</span>
+                        <div class="valor-total">R$ 42,90</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- COLUNA DE PAGAMENTO -->
+            <aside class="coluna-pagamento">
+
+                <!-- FORMA DE PAGAMENTO -->
+                <div class="painel">
+                    <div class="titulo-painel">
+                        <h3>Forma de pagamento</h3>
+                    </div>
+
+                    <div class="opcoes-pagamento">
+
+                        <label class="opcao-pagamento selecionada">
+                            <input type="radio" name="pagamento" checked>
+
+                            <span class="icone-pagamento">PIX</span>
+
+                            <span class="texto-pagamento">
+                                <strong>Pix</strong>
+                                <span>Pagamento instantâneo</span>
+                            </span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- PIX / QR CODE -->
+                <div class="painel area-pix">
+                    <h3>Pagamento via Pix</h3>
+
+                    <p>
+                        O QR Code de pagamento será exibido nesta área.
+                    </p>
+
+                    <div class="qr-placeholder">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <path d="M14 14h3v3h-3zM20 14v2M14 20h2M20 18v3M17 20h1"/>
+                        </svg>
+
+                        <span>QR Code indisponível</span>
+                    </div>
+
+                    <div class="aviso-pix">
+                        Esta é uma área ilustrativa. A geração de um QR Code válido
+                        depende da integração com um serviço de pagamento.
+                    </div>
+                </div>
+
+                <!-- AÇÕES -->
+                <div class="acoes-venda">
+                    <button type="button" class="btn-finalizar">
+                        Finalizar venda
+                    </button>
+
+                    <button type="button" class="btn-cancelar">
+                        Cancelar venda
+                    </button>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+</body>
+</html>
